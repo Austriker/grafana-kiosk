@@ -31,6 +31,7 @@ func GrafanaKioskGCOM(cfg *Config) {
 		chromedp.Flag("disable-overlay-scrollbar", true),
 		chromedp.Flag("window-position", cfg.General.WindowPosition),
 		chromedp.Flag("check-for-update-interval", "31536000"),
+		chromedp.DisableGPU,
 		chromedp.UserDataDir(dir),
 	}
 

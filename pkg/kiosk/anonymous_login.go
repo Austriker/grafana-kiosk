@@ -32,6 +32,7 @@ func GrafanaKioskAnonymous(cfg *Config) {
 		chromedp.Flag("test-type", cfg.Target.IgnoreCertificateErrors),
 		chromedp.Flag("window-position", cfg.General.WindowPosition),
 		chromedp.Flag("check-for-update-interval", "31536000"),
+		chromedp.DisableGPU,
 		chromedp.UserDataDir(dir),
 	}
 
